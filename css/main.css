@@ -7,8 +7,13 @@ body {
     font-family: 'Nanum Gothic', sans-serif;
 }
 
+a {
+ color: #656565;
+ text-decoration: none;
+}
+
 img {
- display: block;
+    display: block;
 }
 
 /* Header 영역 */
@@ -30,5 +35,50 @@ header .logo {
     top: 0;
     bottom: 0;
     left: 0;
-    margin: auto; /* 헤더 영역에서 수직 가운데 정렬 */
+    margin: auto;
+    /* 헤더 영역에서 수직 가운데 정렬 */
+    display: none;
 }
+
+header .sub-menu {
+}
+
+header .sub-menu ul.menu {
+    font-family: Arial, sans-serif;
+    display: flex;
+}
+
+header .sub-menu ul.menu li {
+    position: relative;
+}
+
+header .sub-menu ul.menu li:not(:first-child)::before {
+    content: "";
+    width: 1px;
+    height: 12px;
+    background-color: #e6e6e6;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    margin: auto; 
+}
+
+header .sub-menu ul.menu li:first-child::before {
+    display: none;
+}
+
+header .sub-menu ul.menu li a {
+    display: block;
+    font-size: 12px;
+    padding: 11px 16px;
+}
+
+header .sub-menu ul.menu li a:hover {
+    color: #000000;
+}
+
+header .sub-menu ul.search {}
+
+header .sub-menu ul.search input {}
+
+header .sub-menu ul.search .material-icons {}
